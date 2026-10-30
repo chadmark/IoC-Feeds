@@ -3,6 +3,11 @@ name: Build SonicWall IoC Feed
 on:
   schedule:
     - cron: '17 * * * *'   # hourly at :17 (off the top of the hour, when Actions is busiest)
+  push:                      # rebuild immediately when config or script changes
+    branches: [main]
+    paths:
+      - 'config/**'
+      - 'scripts/**'
   workflow_dispatch:         # "Run workflow" button for manual runs
     inputs:
       force:
@@ -23,7 +28,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Build feeds
         shell: pwsh
@@ -43,4 +48,5 @@ jobs:
             exit 0
           fi
           git commit -m "IoC feed update $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git pull --rebase origin main
           git push
