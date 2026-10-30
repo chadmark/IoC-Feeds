@@ -1,0 +1,17 @@
+# Global allowlist - IPs/CIDRs that must NEVER appear in the published feeds.
+# One IPv4 address or CIDR per line. Lines starting with # are ignored.
+# Microsoft 365 ranges are pulled automatically from Microsoft's web service.
+# Client-specific IPs (their own WAN IPs, vendors, partners) belong in each
+# firewall's IoC Exclusion Object, NOT here - this repo is public.
+
+# Public DNS resolvers
+1.1.1.1
+1.0.0.1
+8.8.8.8
+8.8.4.4
+9.9.9.9
+149.112.112.112
+208.67.222.222
+208.67.220.220
+
+# Add MSP tooling ranges below (RMM, backup, remote access, PSA) - verify with each vendor

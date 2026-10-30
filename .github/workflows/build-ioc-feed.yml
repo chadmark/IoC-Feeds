@@ -1,0 +1,46 @@
+name: Build SonicWall IoC Feed
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # hourly at :17 (off the top of the hour, when Actions is busiest)
+  workflow_dispatch:         # "Run workflow" button for manual runs
+    inputs:
+      force:
+        description: 'Publish even if the shrink guard trips'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ioc-feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build feeds
+        shell: pwsh
+        run: |
+          $params = @{ RepoRoot = $env:GITHUB_WORKSPACE }
+          if ('${{ inputs.force }}' -eq 'true') { $params.Force = $true }
+          ./scripts/Build-SonicWallIoCFeed.ps1 @params
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feeds state
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "IoC feed update $(date -u +'%Y-%m-%dT%H:%MZ')"
+          git push
