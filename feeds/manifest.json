@@ -1,5 +1,5 @@
 {
-  "generatedUtc": "2026-10-30T18:39:19Z",
+  "generatedUtc": "2026-10-30T18:43:58Z",
   "builder": "Build-SonicWallIoCFeed.ps1 v1.0",
   "canaryIP": "192.0.2.1",
   "budgets": {
@@ -18,7 +18,7 @@
     "customEntries": 8,
     "m365Version": "2026103000",
     "m365Ranges": 34,
-    "m365Source": "live",
+    "m365Source": "cache",
     "ipsProtected": 0
   },
   "sources": [
