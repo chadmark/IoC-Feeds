@@ -1,0 +1,78 @@
+{
+  "generatedUtc": "2026-10-30T18:39:19Z",
+  "builder": "Build-SonicWallIoCFeed.ps1 v1.0",
+  "canaryIP": "192.0.2.1",
+  "budgets": {
+    "tz": 24000,
+    "nsa": 49000
+  },
+  "outputs": {
+    "c2": 1,
+    "inboundCandidates": 27158,
+    "inboundTz": 23997,
+    "inboundNsa": 27158,
+    "droppedForTzCap": 3161,
+    "droppedForNsaCap": 0
+  },
+  "allowlist": {
+    "customEntries": 8,
+    "m365Version": "2026103000",
+    "m365Ranges": 34,
+    "m365Source": "live",
+    "ipsProtected": 0
+  },
+  "sources": [
+    {
+      "name": "feodo_recommended",
+      "role": "c2",
+      "url": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt",
+      "status": "live",
+      "error": "",
+      "lines": 1,
+      "valid": 1,
+      "cidrSkipped": 0,
+      "ipv6Skipped": 0,
+      "bogonDropped": 0,
+      "invalid": 0
+    },
+    {
+      "name": "et_compromised",
+      "role": "inbound",
+      "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt",
+      "status": "live",
+      "error": "",
+      "lines": 536,
+      "valid": 536,
+      "cidrSkipped": 0,
+      "ipv6Skipped": 0,
+      "bogonDropped": 0,
+      "invalid": 0
+    },
+    {
+      "name": "cins_army",
+      "role": "inbound",
+      "url": "https://cinsscore.com/list/ci-badguys.txt",
+      "status": "live",
+      "error": "",
+      "lines": 15000,
+      "valid": 15000,
+      "cidrSkipped": 0,
+      "ipv6Skipped": 0,
+      "bogonDropped": 0,
+      "invalid": 0
+    },
+    {
+      "name": "ipsum_level3",
+      "role": "inbound",
+      "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt",
+      "status": "live",
+      "error": "",
+      "lines": 18482,
+      "valid": 18482,
+      "cidrSkipped": 0,
+      "ipv6Skipped": 0,
+      "bogonDropped": 0,
+      "invalid": 0
+    }
+  ]
+}
