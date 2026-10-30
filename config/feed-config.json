@@ -16,7 +16,7 @@
       "name": "et_compromised",
       "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt",
       "role": "inbound",
-      "minEntries": 50,
+      "minEntries": 250,
       "enabled": true,
       "notes": "Proofpoint Emerging Threats compromised hosts."
     },
@@ -24,7 +24,7 @@
       "name": "cins_army",
       "url": "https://cinsscore.com/list/ci-badguys.txt",
       "role": "inbound",
-      "minEntries": 500,
+      "minEntries": 7500,
       "enabled": true,
       "notes": "CINS Army, poorly scored IPs not on other lists."
     },
@@ -32,7 +32,7 @@
       "name": "ipsum_level3",
       "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt",
       "role": "inbound",
-      "minEntries": 500,
+      "minEntries": 9000,
       "enabled": true,
       "notes": "IPsum, IPs on 3+ public blacklists. Raise to levels/4.txt or 5.txt to tighten."
     }
