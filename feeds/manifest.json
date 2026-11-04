@@ -1,5 +1,5 @@
 {
-  "generatedUtc": "2026-11-04T11:08:31Z",
+  "generatedUtc": "2026-11-04T18:41:05Z",
   "builder": "Build-SonicWallIoCFeed.ps1 v1.0",
   "canaryIP": "192.0.2.1",
   "budgets": {
@@ -8,10 +8,10 @@
   },
   "outputs": {
     "c2": 1,
-    "inboundCandidates": 26492,
+    "inboundCandidates": 26839,
     "inboundTz": 23997,
-    "inboundNsa": 26492,
-    "droppedForTzCap": 2495,
+    "inboundNsa": 26839,
+    "droppedForTzCap": 2842,
     "droppedForNsaCap": 0
   },
   "allowlist": {
