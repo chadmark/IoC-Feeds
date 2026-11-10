@@ -1,5 +1,5 @@
 {
-  "generatedUtc": "2026-11-10T17:56:30Z",
+  "generatedUtc": "2026-11-10T23:29:50Z",
   "builder": "Build-SonicWallIoCFeed.ps1 v1.0",
   "canaryIP": "192.0.2.1",
   "budgets": {
@@ -8,10 +8,10 @@
   },
   "outputs": {
     "c2": 1,
-    "inboundCandidates": 27661,
+    "inboundCandidates": 27821,
     "inboundTz": 23997,
-    "inboundNsa": 27661,
-    "droppedForTzCap": 3664,
+    "inboundNsa": 27821,
+    "droppedForTzCap": 3824,
     "droppedForNsaCap": 0
   },
   "allowlist": {
@@ -41,8 +41,8 @@
       "url": "https://rules.emergingthreats.net/blockrules/compromised-ips.txt",
       "status": "live",
       "error": "",
-      "lines": 506,
-      "valid": 506,
+      "lines": 491,
+      "valid": 491,
       "cidrSkipped": 0,
       "ipv6Skipped": 0,
       "bogonDropped": 0,
