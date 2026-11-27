@@ -1,5 +1,5 @@
 {
-  "generatedUtc": "2026-11-26T22:25:08Z",
+  "generatedUtc": "2026-11-27T05:07:50Z",
   "builder": "Build-SonicWallIoCFeed.ps1 v1.0",
   "canaryIP": "192.0.2.1",
   "budgets": {
@@ -8,10 +8,10 @@
   },
   "outputs": {
     "c2": 1,
-    "inboundCandidates": 28388,
+    "inboundCandidates": 27189,
     "inboundTz": 23997,
-    "inboundNsa": 28388,
-    "droppedForTzCap": 4391,
+    "inboundNsa": 27189,
+    "droppedForTzCap": 3192,
     "droppedForNsaCap": 0
   },
   "allowlist": {
@@ -67,8 +67,8 @@
       "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt",
       "status": "live",
       "error": "",
-      "lines": 17554,
-      "valid": 17554,
+      "lines": 17606,
+      "valid": 17606,
       "cidrSkipped": 0,
       "ipv6Skipped": 0,
       "bogonDropped": 0,
